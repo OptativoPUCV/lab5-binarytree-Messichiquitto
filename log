@@ -33,3 +33,15 @@ treemap.c:56:20: error: variable ‘parent’ set but not used [-Werror=unused-b
 cc1: all warnings being treated as errors
 Compilation failed
 da66fb1
+Tue 07 May 2024 03:35:19 PM UTC: 
+ treemap.c | 35 +++++++++++++++++++++++++++--------
+ 1 file changed, 27 insertions(+), 8 deletions(-)
+In file included from test.c:4:
+In function ‘insertTreeMap’,
+    inlined from ‘insertTreeMap’ at treemap.c:48:6:
+treemap.c:56:16: error: ‘*newNode.pair’ may be used uninitialized [-Werror=maybe-uninitialized]
+   56 |         newNode->pair->key = key;
+      |         ~~~~~~~^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+575dd53
