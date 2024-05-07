@@ -72,7 +72,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         }
     }
     */
-    return NULL;
+    return;
         
 }
 
