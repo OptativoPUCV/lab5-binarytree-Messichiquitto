@@ -52,13 +52,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         tree->current = tree->root;
     }
     else{
-        TreeNode* newNode = (TreeNode*)malloc(sizeof(TreeNode));
-        newNode->pair->key = key;
-        newNode->pair->value = value;
-        newNode->left = NULL;
-        newNode->right = NULL;
-        newNode->parent = NULL;
-
+        TreeNode* newNode = createTreeNode(key, value);
         TreeNode* parent = NULL;
         TreeNode* current = tree->root;
 
