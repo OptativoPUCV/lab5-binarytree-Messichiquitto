@@ -44,7 +44,7 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
     return new;
 }
 
-//funcion para insertar datos en el arbol
+/*
 void insertTreeMap(TreeMap * tree, void* key, void * value) {
     if (tree == NULL || key == NULL || value == NULL) return;
     if (tree->root == NULL){
@@ -52,37 +52,26 @@ void insertTreeMap(TreeMap * tree, void* key, void * value) {
         tree->current = tree->root;
     }
     else{
-        TreeNode* newNode = createTreeNode(key, value);
-        TreeNode* parent = NULL;
-        TreeNode* current = tree->root;
+        TreeNode * aux = tree->root;
 
-        // Buscar el lugar adecuado para insertar el nuevo nodo
-        while (current != NULL) {
-            parent = current;
-            if (tree->lower_than(key, current->pair->key)) {
-                current = current->left;
-            } 
-            else if(tree->current->pair->key == newNode->pair->key)
+        while(aux != NULL){
+            if(is_equal(tree,key,aux->pair->key)){
                 return;
-            else {
-                current = current->right;
             }
-        }
-
-        // Asignar el padre del nuevo nodo
-        newNode->parent = parent;
-
-        // Si el árbol está vacío, el nuevo nodo es la raíz
-        if (parent == NULL) {
-            tree->root = newNode;
-        } else if (tree->lower_than(key, parent->pair->key)) {
-            parent->left = newNode;
-        } else {
-            parent->right = newNode;
+            else{
+                if(tree->lower_than(key,aux->pair->key) == 1)
+                {
+                    if(aux->left == NULL)
+                    {
+                        aux->left = createTreeNode(key, value);
+                        
+                    }
+                }
+            }
         }
     }
 }
-
+*/
 
 TreeNode * minimum(TreeNode * x){
 

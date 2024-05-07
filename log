@@ -56,3 +56,13 @@ Tue 07 May 2024 03:39:59 PM UTC:
  1 file changed, 4 insertions(+), 1 deletion(-)
  tests:  0|0
 96ab311
+Tue 07 May 2024 05:09:51 PM UTC: 
+ treemap.c | 37 +++++++++++++------------------------
+ 1 file changed, 13 insertions(+), 24 deletions(-)
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/cc5cfhkr.o: in function `insert_test1':
+test.c:(.text+0x737): undefined reference to `insertTreeMap'
+/nix/store/039g378vc3pc3dvi9dzdlrd0i4q93qwf-binutils-2.39/bin/ld: /tmp/cc5cfhkr.o: in function `insert_test2':
+test.c:(.text+0x7c2): undefined reference to `insertTreeMap'
+collect2: error: ld returned 1 exit status
+Compilation failed
+a8105ec
